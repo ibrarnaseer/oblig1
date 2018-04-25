@@ -1,0 +1,30 @@
+// Dette er for å importere Scanner verktøyet
+import java.util.Scanner;
+// Dette er klassen
+public class LikeVerdier {
+// Her begynner selve programmet.
+  public static void main(String[] args) {
+// Jeg begynner med å gi Scanner et navn.
+    Scanner in;
+// Saa lager jeg to string som skal lese hva som blir skrevet.
+    String les1;
+    String les2;
+// Jeg har også to variabler som da er de to inputene fra string.
+    int c;
+    int d;
+// Dette er sånn jeg får de to inputene til å bli tall som java forstår.
+    in = new Scanner(System.in);
+    les1 = in.nextLine();
+    les2 = in.nextLine();
+    c = Integer.parseInt(les1);
+    d = Integer.parseInt(les2);
+// Hvis c er like stor som d, så printer den ut at de er like store.
+    if (c==d) {
+      System.out.println("c og d er like");
+    }
+// Hvis ikke, så printer den ut at de ikke er like store.
+    else {
+      System.out.println("c er ikke lik d");
+    }
+  }
+}
