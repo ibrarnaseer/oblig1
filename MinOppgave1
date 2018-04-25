@@ -1,0 +1,415 @@
+/* Dette er for å importere alle verktøy.
+Kunne ogsaa i stedet for "*" brukt "Scanner" */
+import java.util.*;
+// Dette er klassen
+public class MinOppgave1 {
+/* Her har jeg en metode med returverdi. Hvor jeg vil
+at "Stringen" 'navn' skal få bli med ut av metoden pluss
+at jeg vil få navnet og gi en velkomst */
+  static String quizstart() {
+    Scanner in;
+    String navn;
+    in = new Scanner(System.in);
+// Printer ut en tekst som ber deg skrive inn navn.
+    System.out.println("Skriv inn navn for aa begynne: ");
+// inputen du skriver inn som navn.
+    navn = in.nextLine();
+
+    System.out.println("\nVelkommen " + navn + "! Klar?");
+// Her ser du at jeg returnerer "navn"
+    return navn;
+  }
+/* Her er første metode for spørsmål. Jeg begynner
+først med å få inn Scanner funksjonen
+så man kan skrive inn i terminalen.
+I denne metoden begynner jeg også med en variabel
+"teller" som skal telle poengsummen til slutt.
+Denne blir også returnert mot slutten. */
+  static int spm1() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+/* Her vises spørsmålet og de fire svaralternativene
+på terminalen, også skal du velge et av dem.
+(svar = in.nextLine(); er for aa skrive alternativet i terminalen)*/
+    System.out.println("Hva heter hovedpersonen i Uncharted-spillserien?");
+    System.out.println("a: Andrew Drake");
+    System.out.println("b: Collin Drake");
+    System.out.println("c: Nathan Drake");
+    System.out.println("d: Alexander Drake");
+    svar = in.nextLine();
+/* Hvis du velger alternativ c (samme om du bruker stor eller liten)
+printer den ut en tekst om at det var riktig i terminalen,
+pluss at teller variablen går opp én. */
+    if (svar.equalsIgnoreCase("c")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+/* Hvis du ikke svarte alternativ c, men noen av de andre
+kommer det opp en beskjed som sier at du svarte feil,
+og forteller det riktige svaret. */
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var c: Nathan Drake.");
+    }
+    else if (svar.equalsIgnoreCase("b")) {
+      System.out.println("Det var feil. Riktig svar var c: Nathan Drake.");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var c: Nathan Drake.");
+    }
+/* Om du av en eller annen grunn skulle velge å prøve
+å skrive inn noe annet enn de fire alternativene
+vil du få opp en beskjed om at det ikke er et gyldig alternativ.
+Den vil så sende deg tilbake til samme spørsmål. */
+// \n er bare for å hoppe ned en linje i terminalen.
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm1();
+    }
+/* Her blir teller returnert og forhåpentligvis teller
+et poeng for brukeren, om brukeren svarte riktig. */
+    return teller;
+  }
+/* For de neste 10 spørsmålene er det helt likt som den over.
+Hopp ned til linje 372 for å lese kommentarer videre. */
+  static int spm2() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("Hvem laget Battlefield-serien?");
+    System.out.println("a: BioWare");
+    System.out.println("b: DICE");
+    System.out.println("c: Bungie");
+    System.out.println("d: Square Enix");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("b")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var b: DICE");
+    }
+    else if (svar.equalsIgnoreCase("c")) {
+      System.out.println("Det var feil. Riktig svar var b: DICE");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var b: DICE");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm2();
+    }
+    return teller;
+  }
+
+  static int spm3() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("I 2013 kom det ut et nytt spill som knuste alle forrige rekorder for mest solgte spill innen et døgn. Hvilket spill var dette?");
+    System.out.println("a: Diablo III");
+    System.out.println("b: Pokémon Diamond and Pearl");
+    System.out.println("c: Call of Duty: Ghosts");
+    System.out.println("d: Grand Theft Auto V");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("d")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var d: Grand Theft Auto V");
+    }
+    else if (svar.equalsIgnoreCase("b")) {
+      System.out.println("Det var feil. Riktig svar var d: Grand Theft Auto V");
+    }
+    else if (svar.equalsIgnoreCase("c")) {
+      System.out.println("Det var feil. Riktig svar var d: Grand Theft Auto V");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm3();
+    }
+    return teller;
+  }
+
+  static int spm4() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("Før Grand Theft Auto V var det hvilket spill som hadde rekorden?");
+    System.out.println("a: Diablo III");
+    System.out.println("b: Super Mario Bros.");
+    System.out.println("c: Call of Duty: Black Ops II");
+    System.out.println("d: Grand Theft Auto IV");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("c")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var c: Call of Duty: Black Ops II");
+    }
+    else if (svar.equalsIgnoreCase("b")) {
+      System.out.println("Det var feil. Riktig svar var c: Call of Duty: Black Ops II");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var c: Call of Duty: Black Ops II");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm4();
+    }
+    return teller;
+  }
+
+  static int spm5() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("Hvor mange prosent (ca.) av alle som spiller er jenter?");
+    System.out.println("a: 27%");
+    System.out.println("b: 48%");
+    System.out.println("c: 53%");
+    System.out.println("d: 61%");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("b")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var b: 48%");
+    }
+    else if (svar.equalsIgnoreCase("c")) {
+      System.out.println("Det var feil. Riktig svar var b: 48%");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var b: 48%");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm5();
+    }
+    return teller;
+  }
+
+  static int spm6() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("Hvilket spill er det som har solgt mest i hele verden?");
+    System.out.println("a: Minecraft");
+    System.out.println("b: Tetris");
+    System.out.println("c: Wii Sports");
+    System.out.println("d: Grand Theft Auto V");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("b")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var b: Tetris");
+    }
+    else if (svar.equalsIgnoreCase("c")) {
+      System.out.println("Det var feil. Riktig svar var b: Tetris");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var b: Tetris");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm6();
+    }
+    return teller;
+  }
+
+  static int spm7() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("Hvilket av disse er et av verdens første videospill som ble populært?");
+    System.out.println("a: Bertie the Brain");
+    System.out.println("b: Pong");
+    System.out.println("c: Nim");
+    System.out.println("d: Space War!");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("b")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var b: Pong");
+    }
+    else if (svar.equalsIgnoreCase("c")) {
+      System.out.println("Det var feil. Riktig svar var b: Pong");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var b: Pong");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm7();
+    }
+    return teller;
+  }
+
+  static int spm8() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("Hvilken spillkonsoll er den mest populære? (2016)");
+    System.out.println("a: Playstation 4");
+    System.out.println("b: Xbox One");
+    System.out.println("c: Nintendo Wii U");
+    System.out.println("d: Nintendo 3ds");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("a")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("b")) {
+      System.out.println("Det var feil. Riktig svar var a: Playstation 4");
+    }
+    else if (svar.equalsIgnoreCase("c")) {
+      System.out.println("Det var feil. Riktig svar var a: Playstation 4");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var a: Playstation 4");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm8();
+    }
+    return teller;
+  }
+
+  static int spm9() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("I 1988 startet to store selskap på en spillkonsoll sammen. Hvilke to selskap var dette?");
+    System.out.println("a: Sony og Microsoft");
+    System.out.println("b: SEGA og Nintendo");
+    System.out.println("c: Nintendo og Sony");
+    System.out.println("d: Microsoft og SEGA");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("c")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var c: Nintendo og Sony");
+    }
+    else if (svar.equalsIgnoreCase("b")) {
+      System.out.println("Det var feil. Riktig svar var c: Nintendo og Sony");
+    }
+    else if (svar.equalsIgnoreCase("d")) {
+      System.out.println("Det var feil. Riktig svar var c: Nintendo og Sony");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm9();
+    }
+    return teller;
+  }
+
+  static int spm10() {
+    int teller = 0;
+    Scanner in;
+    String svar;
+    in = new Scanner (System.in);
+
+    System.out.println("Dagens system for aldersgrenser på videospill (ESRB) ble inspirert av et spill. Hvilket spill var dette?");
+    System.out.println("a: Donkey Kong");
+    System.out.println("b: Grand Theft Auto");
+    System.out.println("c: Wolfenstein 3D");
+    System.out.println("d: Mortal Kombat");
+    svar = in.nextLine();
+
+    if (svar.equalsIgnoreCase("d")) {
+      teller = 1;
+      System.out.println("Bra. Det var riktig svar!");
+    }
+    else if (svar.equalsIgnoreCase("a")) {
+      System.out.println("Det var feil. Riktig svar var d: Mortal Kombat");
+    }
+    else if (svar.equalsIgnoreCase("b")) {
+      System.out.println("Det var feil. Riktig svar var d: Mortal Kombat");
+    }
+    else if (svar.equalsIgnoreCase("c")) {
+      System.out.println("Det var feil. Riktig svar var d: Mortal Kombat");
+    }
+    else {
+      System.out.println("Det er ikke et svar alternativ.\n");
+      spm10();
+    }
+    return teller;
+  }
+// Her begynner selve programmmet.
+  public static void main(String[] args) {
+/* Først får jeg inn teller variablen, og
+hva som er maks poengsum. */
+    int teller = 0;
+    int max = 10;
+/* Forteller at "String navn" blir funnet i
+metoden quizstart(), som er hva brukeren har
+skrevet inn som navn i begynnelsen. */
+    String navn = quizstart();
+// Printer ut teksten som forteller at det er første spørsmål.
+    System.out.println("\nForste sporsmaal:");
+/* Den som sjekker om du fikk riktig svar, og eventuelt
+teller opp poeng for dette spørsmålet. Det er også
+den som sender deg til første spørsmålsmetode. */
+    teller += spm1();
+// Samme som over skjer nedover hele her. Hopp til linje 407
+    System.out.println("\nAndre sporsmaal:");
+    teller += spm2();
+    System.out.println("\nTredje sporsmaal:");
+    teller += spm3();
+    System.out.println("\nFjerde sporsmaal:");
+    teller += spm4();
+    System.out.println("\nFemte sporsmaal:");
+    teller += spm5();
+    System.out.println("\nSjette sporsmaal:");
+    teller += spm6();
+    System.out.println("\nSjuende sporsmaal:");
+    teller += spm7();
+    System.out.println("\nAattende sporsmaal:");
+    teller += spm8();
+    System.out.println("\nNiende sporsmaal:");
+    teller += spm9();
+    System.out.println("\nTiende og siste sporsmaal:");
+    teller += spm10();
+/* Printer ut en gratulasjonstekst med navnet som ble returnert
+fra metoden quizstart().
+Så printer den ut en takk for at du deltok.
+Til slutt printer den ut "Ha en fin dag videre!" */
+    System.out.println("\nGratulerer " + navn + "! Du fikk " + teller + " av maksimalt " + max + " poeng!");
+    System.out.println("Din premie for dette er egentlig ingenting, men takk for at du deltok på quizen!");
+    System.out.println("Ha en fin dag videre!");
+  }
+}
