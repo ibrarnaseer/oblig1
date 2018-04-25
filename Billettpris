@@ -1,0 +1,33 @@
+// Dette er for å importere Scanner verktøyet
+import java.util.Scanner;
+// Dette er klassen
+public class Billettpris {
+// Her begynner selve programmet.
+  public static void main(String[] args) {
+// Jeg begynner med å gi Scanner et navn.
+    Scanner in;
+// Så lager jeg en string som skal lese hva som blir skrevet.
+    String innles;
+/* Jeg har to variabler. En som sjekker alder som blir tastet inn,
+og en som er 50, fordi at billettprisen er 50kr til vanlig. */
+    int alder;
+    int pris = 50;
+// Dette er sånn jeg får alder inputen til å bli et tall som java forstår.
+    in = new Scanner(System.in);
+    innles = in.nextLine();
+    alder = Integer.parseInt(innles);
+/* Bolskt uttrykk for å sjekke om brukeren er yngre enn 12
+eller eldre enn 67. */
+    boolean HalvPris;
+    HalvPris = alder<12 || alder>67;
+/* Hvis brukeren er yngre enn 12 eller eldre enn 67 skal programmet
+ta variablen pris og dele den på to for at brukeren skal få halv pris. */
+    if (HalvPris) {
+      System.out.println(pris / 2 + "kr");
+    }
+// Hvis ikke kommer det opp den vanlige prisen. 
+    else {
+      System.out.println(pris + "kr");
+    }
+  }
+}
