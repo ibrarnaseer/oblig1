@@ -1,0 +1,27 @@
+// Dette er for å importere Scanner verktøyet
+import java.util.Scanner;
+// Dette er klassen
+public class Beslutninger {
+// Her begynner selve programmet.
+  public static void main(String[] args) {
+// Jeg begynner med å gi Scanner et navn.
+    Scanner in;
+// Så lager jeg en string som skal lese hva som blir skrevet.
+    String innles;
+// En variabel som skal være alderen brukeren skriver inn.
+    int alder;
+// Dette er sånn jeg får alder inputen til å bli et tall som java forstår.
+    in = new Scanner(System.in);
+    innles = in.nextLine();
+    alder = Integer.parseInt(innles);
+/* Hvis input alderen er større eller lik 18
+kommer myndig beskjeden opp på terminal. */
+    if (alder >= 18) {
+      System.out.println("Du er myndig.");
+    }
+// Hvis ikke så kommer ikke myndig beskjeden opp.
+    else {
+      System.out.println("Du er ikke myndig.");
+    }
+  }
+}
