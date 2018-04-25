@@ -1,0 +1,33 @@
+// Dette er for å importere Scanner verktøyet
+import java.util.Scanner;
+// Dette er klassen
+public class Metoder {
+// Her begynner jeg med en metode navnogsted()
+  static void navnogsted() {
+// Jeg begynner med å gi Scanner et navn.
+    Scanner in;
+// Så en string som skal bli lest inn fra terminal som skal være navnet.
+    String navn;
+// Så en string som skal bli lest inn fra terminal som skal være bostedet.
+    String bosted;
+// Dette er sånn programmet får lest inn input.
+    in = new Scanner(System.in);
+// Metoden går ut på at brukeren skal skrive inn navn.
+    System.out.println("Skriv inn navn:");
+// Dette er her brukeren skriver inn navn
+    navn = in.nextLine();
+// Så skal brukeren skrive inn bosted.
+    System.out.println("Skriv inn bosted:");
+// Dette er her brukeren skriver inn bosted
+    bosted = in.nextLine();
+// Deretter printer den ut Hei og brukerens navn pluss bostedet.
+    System.out.println("Hei, " + navn + "! Du er fra " + bosted + ".");
+  }
+// Her begynner selve programmet.
+  public static void main(String[] args) {
+// Det tilkaller metoden tre ganger. 
+    navnogsted();
+    navnogsted();
+    navnogsted();
+  }
+}
